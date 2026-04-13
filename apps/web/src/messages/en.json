@@ -14,9 +14,21 @@
     "readMore": "Read More"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "subtitle": "Here are some projects I've worked on, spanning frontend, backend, and full-stack applications.",
+    "empty": "No projects yet. Stay tuned.",
+    "demo": "Live Demo",
+    "source": "Source Code"
   },
   "about": {
-    "title": "About"
+    "title": "About Me",
+    "intro": "Hi there! I'm a full-stack developer passionate about building elegant and practical web applications.",
+    "introDetail": "Currently focused on frontend engineering, the React ecosystem, and Node.js backend development. I love solving real-world problems through code and enjoy the process of learning new technologies.",
+    "skillsTitle": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others",
+    "contactTitle": "Get in Touch",
+    "contactDesc": "If you'd like to collaborate or just say hello, feel free to reach out through the following channels."
   }
 }
