@@ -1,0 +1,7 @@
+{
+  "name": "@my-site/db",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
