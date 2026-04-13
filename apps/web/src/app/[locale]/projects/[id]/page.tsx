@@ -3,6 +3,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { getProjectById } from "@my-site/db";
 import { createServerClient } from "@/lib/supabase/server";
 import Link from "next/link";
+import Image from "next/image";
 
 export const revalidate = 3600;
 
@@ -41,11 +42,12 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
       <article className="max-w-4xl mx-auto">
         {project.cover_url && (
-          <div className="aspect-video overflow-hidden rounded-xl bg-muted mb-8">
-            <img
+          <div className="aspect-video overflow-hidden rounded-xl bg-muted mb-8 relative">
+            <Image
               src={project.cover_url}
               alt={title}
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         )}

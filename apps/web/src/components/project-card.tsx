@@ -1,5 +1,6 @@
 import type { Project } from "@my-site/db";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -15,11 +16,12 @@ export function ProjectCard({ project, locale, demoLabel, sourceLabel }: Project
   return (
     <Link href={`/${locale}/projects/${project.id}`} className="group rounded-xl border border-border bg-card overflow-hidden transition-shadow hover:shadow-md block">
       {project.cover_url && (
-        <div className="aspect-video overflow-hidden bg-muted">
-          <img
+        <div className="aspect-video overflow-hidden bg-muted relative">
+          <Image
             src={project.cover_url}
             alt={title}
-            className="h-full w-full object-cover transition-transform group-hover:scale-105"
+            fill
+            className="object-cover transition-transform group-hover:scale-105"
           />
         </div>
       )}
