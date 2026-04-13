@@ -22,6 +22,11 @@ export async function updateSession(request: NextRequest) {
     }
   );
 
+  // 开发环境：跳过认证检查，直接放行 admin 路由
+  if (process.env.NODE_ENV === "development") {
+    return response;
+  }
+
   const {
     data: { user },
   } = await supabase.auth.getUser();

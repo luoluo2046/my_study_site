@@ -18,7 +18,15 @@
     "subtitle": "Here are some projects I've worked on, spanning frontend, backend, and full-stack applications.",
     "empty": "No projects yet. Stay tuned.",
     "demo": "Live Demo",
-    "source": "Source Code"
+    "source": "Source Code",
+    "searchPlaceholder": "Search by name, description or tech stack...",
+    "noResults": "No matching projects found"
+  },
+  "projectDetail": {
+    "back": "Back to projects",
+    "techStack": "Tech Stack",
+    "viewDemo": "View Demo",
+    "viewSource": "View Source"
   },
   "about": {
     "title": "About Me",

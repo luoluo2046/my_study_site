@@ -18,7 +18,15 @@
     "subtitle": "这些是我参与开发的项目，涵盖前端、后端和全栈应用。",
     "empty": "暂无项目，敬请期待。",
     "demo": "在线预览",
-    "source": "源代码"
+    "source": "源代码",
+    "searchPlaceholder": "搜索项目名称、描述或技术栈...",
+    "noResults": "没有找到匹配的项目"
+  },
+  "projectDetail": {
+    "back": "返回项目列表",
+    "techStack": "技术栈",
+    "viewDemo": "查看演示",
+    "viewSource": "查看源码"
   },
   "about": {
     "title": "关于我",
