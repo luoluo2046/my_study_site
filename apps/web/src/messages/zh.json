@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "首页",
+    "blog": "博客",
+    "projects": "作品集",
+    "about": "关于我"
+  },
+  "home": {
+    "greeting": "你好，我是一名全栈开发者",
+    "subtitle": "构建 Web 应用，记录技术思考"
+  },
+  "blog": {
+    "title": "博客",
+    "readMore": "阅读更多"
+  },
+  "projects": {
+    "title": "作品集"
+  },
+  "about": {
+    "title": "关于我"
+  }
+}
