@@ -1,4 +1,5 @@
 import type { Project } from "@my-site/db";
+import Link from "next/link";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,7 +13,7 @@ export function ProjectCard({ project, locale, demoLabel, sourceLabel }: Project
   const description = locale === "en" && project.description_en ? project.description_en : project.description;
 
   return (
-    <div className="group rounded-xl border border-border bg-card overflow-hidden transition-shadow hover:shadow-md">
+    <Link href={`/${locale}/projects/${project.id}`} className="group rounded-xl border border-border bg-card overflow-hidden transition-shadow hover:shadow-md block">
       {project.cover_url && (
         <div className="aspect-video overflow-hidden bg-muted">
           <img
@@ -39,27 +40,17 @@ export function ProjectCard({ project, locale, demoLabel, sourceLabel }: Project
         )}
         <div className="mt-4 flex gap-3">
           {project.demo_url && (
-            <a
-              href={project.demo_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-primary hover:underline"
-            >
+            <span className="text-sm text-primary hover:underline">
               {demoLabel}
-            </a>
+            </span>
           )}
           {project.repo_url && (
-            <a
-              href={project.repo_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-primary hover:underline"
-            >
+            <span className="text-sm text-primary hover:underline">
               {sourceLabel}
-            </a>
+            </span>
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
