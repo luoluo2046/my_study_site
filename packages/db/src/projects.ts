@@ -26,16 +26,16 @@ export async function getAllProjects(client: Client): Promise<Project[]> {
 
 export async function upsertProject(
   client: Client,
-  project: Database["public"]["Tables"]["projects"]["Insert"] & { id?: string }
+  project: Record<string, unknown>
 ): Promise<Project> {
   const { data, error } = await client
     .from("projects")
-    .upsert(project)
+    .upsert(project as never)
     .select()
     .single();
 
   if (error) throw error;
-  return data;
+  return data as unknown as Project;
 }
 
 export async function deleteProject(client: Client, id: string): Promise<void> {

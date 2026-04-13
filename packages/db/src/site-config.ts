@@ -21,10 +21,10 @@ export async function setConfig(
 ): Promise<SiteConfig> {
   const { data, error } = await client
     .from("site_config")
-    .upsert({ key, value }, { onConflict: "key" })
+    .upsert({ key, value } as never, { onConflict: "key" })
     .select()
     .single();
 
   if (error) throw error;
-  return data;
+  return data as unknown as SiteConfig;
 }
